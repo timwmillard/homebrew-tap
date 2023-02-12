@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class MyCricketAuth < Formula
+class Mycricketauth < Formula
   desc ""
   homepage "https://github.com/timwmillard/homebrew-tap"
   version "0.0.1-next"
