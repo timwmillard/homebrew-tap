@@ -23,6 +23,5 @@ class MyCricketAuth < Formula
           bin.install "mycricketauth"
         end
       end
-    ends
-  end
-  
+    end
+end
