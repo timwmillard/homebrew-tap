@@ -5,20 +5,20 @@
 class Cricket < Formula
   desc "Convert MyCricket results to a text format."
   homepage "https://github.com/timwmillard/homebrew-tap"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/timwmillard/cricket/releases/download/v0.1.3/cricket_Mac_m1.tar.gz"
-      sha256 "ab43550b9aae187ae6468d2d8b457aa6ff182fe2d5cf4c9bdf28871be3f3987e"
+    if Hardware::CPU.intel?
+      url "https://github.com/timwmillard/cricket/releases/download/v0.1.4/cricket_Mac_intel.tar.gz"
+      sha256 "e3ac530233e7ac247da39c5f81317a96778948154b1ee4f41a2ddd6fe3952c88"
 
       def install
         bin.install "cricket"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/timwmillard/cricket/releases/download/v0.1.3/cricket_Mac_intel.tar.gz"
-      sha256 "799f1bb114b7b9648226ba3d85658cd868657d64e34bc982bf3f9e245a42b795"
+    if Hardware::CPU.arm?
+      url "https://github.com/timwmillard/cricket/releases/download/v0.1.4/cricket_Mac_m1.tar.gz"
+      sha256 "e681d6540412a3ee03bdd745fb317e6103d0bc2092ff2a589a45a84e4336a47a"
 
       def install
         bin.install "cricket"
@@ -28,16 +28,16 @@ class Cricket < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/timwmillard/cricket/releases/download/v0.1.3/cricket_Linux_arm64.tar.gz"
-      sha256 "f8fd4f8fac8b4011338214c19a8f78d20404b3ebf6f48192e93bc47c52064da1"
+      url "https://github.com/timwmillard/cricket/releases/download/v0.1.4/cricket_Linux_arm64.tar.gz"
+      sha256 "2cef9c8b63ca2b29fc16daa43e4e91dbc704fe7d2b55ae1e079451f50f285eda"
 
       def install
         bin.install "cricket"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/timwmillard/cricket/releases/download/v0.1.3/cricket_Linux_x86_64.tar.gz"
-      sha256 "8a4d81cb72087e80ac5797dafb9b88ea23d973c87e8af25e8f02d5a05562cac7"
+      url "https://github.com/timwmillard/cricket/releases/download/v0.1.4/cricket_Linux_x86_64.tar.gz"
+      sha256 "fdaf3c5b2d8a7b6bf4ac588df310c8577f07e418691b9221c50868e8ccccec9d"
 
       def install
         bin.install "cricket"
